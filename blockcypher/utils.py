@@ -498,12 +498,6 @@ def is_valid_address(b58_address):
         return False
 
 def is_valid_eth_address(addr):
-    if addr.startswith('0x'):
-        addr = addr[2:].strip()
-
-    if len(addr) != 40:
-        return False
-
     return uses_only_hash_chars(addr)
 
 def is_valid_address_for_coinsymbol(b58_address, coin_symbol):
